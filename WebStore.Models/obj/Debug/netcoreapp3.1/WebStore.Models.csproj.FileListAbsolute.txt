@@ -1,0 +1,12 @@
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\bin\Debug\netcoreapp3.1\WebStore.Models.deps.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\bin\Debug\netcoreapp3.1\WebStore.Models.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.csprojAssemblyReference.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.AssemblyInfoInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.AssemblyInfo.cs
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\bin\Debug\netcoreapp3.1\WebStore.Models.runtimeconfig.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\bin\Debug\netcoreapp3.1\WebStore.Models.runtimeconfig.dev.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.genruntimeconfig.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\bin\Debug\netcoreapp3.1\WebStore.Models.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.csproj.CoreCompileInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.Models\obj\Debug\netcoreapp3.1\WebStore.Models.pdb

@@ -1,0 +1,15 @@
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.deps.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csprojAssemblyReference.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.AssemblyInfoInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.AssemblyInfo.cs
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.runtimeconfig.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.runtimeconfig.dev.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.genruntimeconfig.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.Models.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.Models.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csproj.CopyComplete
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.pdb

@@ -1,0 +1,17 @@
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.BLL.deps.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.BLL.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.csprojAssemblyReference.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.AssemblyInfoInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.AssemblyInfo.cs
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.BLL.runtimeconfig.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.BLL.runtimeconfig.dev.json
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.genruntimeconfig.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.DAL.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.Models.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.BLL.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.DAL.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\bin\Debug\netcoreapp3.1\WebStore.Models.pdb
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.csproj.CopyComplete
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.dll
+C:\Users\Tsubasa Katakiri\source\repos\HomeworkASPNET1\WebStore.BLL\obj\Debug\netcoreapp3.1\WebStore.BLL.pdb
