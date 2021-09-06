@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebStore.BLL.Interfaces;
+using WebStore.BLL.VMs;
 using WebStore.DAL.Patterns;
 using WebStore.Models;
 
@@ -18,30 +19,54 @@ namespace WebStore.BLL.Services
             _db = db;
         }
 
-        public async Task<bool> GetProductAsync(Guid productId)
+        public async Task<Guid> CreateProductAsync(ProductCreate productCreate)
         {
             try
             {
-                var product = _db.Products.GetAll().Single(p => p.Id.Equals(productId));
-                List<Comment> comments = (List<Comment>) _db.Comments.GetAll();
-                return true;
-            }
-            catch (Exception ex)
+                var product = new Product()
+                {
+                    Category = productCreate.Category,
+                    Name=productCreate.Name,
+                    Description=productCreate.Description,
+                    Price=productCreate.Price
+                };
+                product = await _db.Products.CreateAsync(product);
+                return product.Id;
+            } 
+            catch(Exception ex)
             {
-                return false;
+                throw ex;
             }
         }
 
-        public async Task<bool> ProductListAsync()
+
+        public List<ProductCreate> ListProducts(Func<Product, bool> expression)
         {
             try
             {
-                List<Product> products = (List<Product>)_db.Products.GetAll();
-                return true;
+                List<Product> products;
+                if (expression == null)
+                {
+                    products = _db.Products.GetAll().ToList();
+                }
+                else
+                {
+                    products = _db.Products.GetAll().Where(expression).ToList();
+                }
+                return products.Select(p =>
+                {
+                    return new ProductCreate()
+                    {
+                        Category = p.Category,
+                        Name = p.Name,
+                        Description = p.Description,
+                        Price = p.Price
+                    };
+                }).ToList();
             }
             catch (Exception ex)
             {
-                return false;
+                throw ex;
             }
         }
     }

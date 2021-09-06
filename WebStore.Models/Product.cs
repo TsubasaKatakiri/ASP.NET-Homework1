@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace WebStore.Models
 {
@@ -20,8 +18,6 @@ namespace WebStore.Models
         [Required]
         public decimal Price { get; set; }
 
-        public string File { get; set; }
-
-        public virtual List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; } = new List<Review>();
     }
 }

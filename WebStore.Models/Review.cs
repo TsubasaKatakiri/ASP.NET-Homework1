@@ -25,7 +25,7 @@ namespace WebStore.Models
 
         public DateTime DateCreated { get; set; }
 
-        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
 
     }
 }

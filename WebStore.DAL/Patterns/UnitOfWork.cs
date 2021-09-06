@@ -11,11 +11,11 @@ namespace WebStore.DAL.Patterns
     {
         private readonly AppDBContext _db;
 
+        private bool _disposed = false;
+
         private IRepository<Product> _products;
         private IRepository<Review> _reviews;
         private IRepository<Comment> _comments;
-
-        private bool _disposed = false;
 
         public UnitOfWork(DbContextOptions<AppDBContext> options)
         {

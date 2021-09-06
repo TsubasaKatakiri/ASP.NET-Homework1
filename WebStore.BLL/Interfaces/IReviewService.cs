@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using WebStore.BLL.VMs;
+using WebStore.Models;
 
 namespace WebStore.BLL.Interfaces
 {
     public interface IReviewService
     {
-        Task<bool> CreateReview(int score, string username, string text, string file);
+        Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate);
+        List<ReviewShow> ListReviews(Func<Review, bool> expression);
     }
 }

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using WebStore.BLL.VMs;
+using WebStore.Models;
 
 namespace WebStore.BLL.Interfaces
 {
     public interface ICommentsService
     {
-        Task<bool> CreateComment(string username, string text);
+        Task<Guid> CreateComment(CommentCreate commentCreate);
+        List<CommentShow> ListComments(Func<Comment, bool> expression);
     }
 }
