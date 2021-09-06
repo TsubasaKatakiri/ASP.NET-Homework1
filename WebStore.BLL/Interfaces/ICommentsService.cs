@@ -9,7 +9,7 @@ namespace WebStore.BLL.Interfaces
 {
     public interface ICommentsService
     {
-        Task<Guid> CreateComment(CommentCreate commentCreate);
+        Task<Guid> CreateCommentAsync(CommentCreate commentCreate);
         List<CommentShow> ListComments(Func<Comment, bool> expression);
     }
 }

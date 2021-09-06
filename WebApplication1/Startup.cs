@@ -36,13 +36,12 @@ namespace WebApplication1
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<AppDBContext>(options => options.UseSqlServer(connection));
+            services.AddControllers();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICommentsService, CommentService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IReviewService, ReviewService>();
-
-            services.AddControllers();
 
             _services = services;
         }
@@ -64,25 +63,6 @@ namespace WebApplication1
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
-
-            app.Run(async context =>
-            {
-                var sb = new StringBuilder();
-                sb.Append("<h1>ÑBÑÉÑu ÑÉÑuÑÇÑrÑyÑÉÑç</h1>");
-                sb.Append("<table>");
-                sb.Append("<tr><th>ÑSÑyÑÅ</th><th>Lifetime</th><th>ÑQÑuÑpÑ|ÑyÑxÑpÑàÑyÑë</th></tr>");
-                foreach (var svc in _services)
-                {
-                    sb.Append("<tr>");
-                    sb.Append($"<td>{svc.ServiceType.FullName}</td>");
-                    sb.Append($"<td>{svc.Lifetime}</td>");
-                    sb.Append($"<td>{svc.ImplementationType?.FullName}</td>");
-                    sb.Append("</tr>");
-                }
-                sb.Append("</table>");
-                context.Response.ContentType = "text/html;charset=utf-8";
-                await context.Response.WriteAsync(sb.ToString());
             });
         }
     }

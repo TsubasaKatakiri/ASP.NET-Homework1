@@ -15,9 +15,10 @@ namespace WebStore.BLL.Services
         private readonly IUnitOfWork _db;
         private readonly IProductService _productService;
 
-        public ReviewService(IUnitOfWork db)
+        public ReviewService(IUnitOfWork db, IProductService productService)
         {
             _db = db;
+            _productService = productService;
         }
 
         public async Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate)

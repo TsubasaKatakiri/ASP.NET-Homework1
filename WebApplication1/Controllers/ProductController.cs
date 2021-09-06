@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebStore.BLL.Interfaces;
 using WebStore.BLL.Services;
+using WebStore.BLL.VMs;
 using WebStore.Models;
 
 namespace WebApplication1.Controllers
 {
     [ApiController]
-    [Route("goods")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private IProductService _productService { get; set; }
@@ -21,17 +22,23 @@ namespace WebApplication1.Controllers
             _productService = productService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [Route("productall")]
+        public List<ProductCreate> GetAllProducts()
         {
-            //return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            //{
-            //    Date = DateTime.Now.AddDays(index),
-            //    TemperatureC = rng.Next(-20, 55),
-            //    Summary = Summaries[rng.Next(Summaries.Length)]
-            //})
-            //.ToArray();
-            return;
+            return _productService.ListProducts(null);
+        }
+
+        [HttpGet]
+        [Route("productid")]
+        public List<ProductCreate> GetProductByID(Guid guid)
+        {
+            return _productService.ListProducts(product => product.Id == guid);
+        }
+
+        [HttpPost]
+        public Guid CreateProduct([FromForm] ProductCreate product)
+        {
+            return (_productService.CreateProductAsync(product)).Result;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace WebStore.BLL.Services
             _db = db;
         }
 
-        public async Task<Guid> CreateComment(CommentCreate commentCreate)
+        public async Task<Guid> CreateCommentAsync(CommentCreate commentCreate)
         {
             try
             {
