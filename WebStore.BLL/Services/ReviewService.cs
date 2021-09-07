@@ -21,21 +21,21 @@ namespace WebStore.BLL.Services
             _productService = productService;
         }
 
-        public async Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate)
+        public async Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate, Guid? productId)
         {
             try
             {
-                var productId = await _productService.CreateProductAsync(
-                    new ProductCreate()
-                    {
-                        Category = reviewCreate.ProductCategory,
-                        Name = reviewCreate.ProductName,
-                        Description = reviewCreate.ProductDescription,
-                        Price = reviewCreate.ProductPrice
-                    });
+                //var productId = await _productService.CreateProductAsync(
+                //    new ProductCreate()
+                //    {
+                //        Category = reviewCreate.ProductCategory,
+                //        Name = reviewCreate.ProductName,
+                //        Description = reviewCreate.ProductDescription,
+                //        Price = reviewCreate.ProductPrice
+                //    });
                 var review = new Review()
                 {
-                    ProductId = productId,
+                    ProductId = (Guid)productId,
                     Score = reviewCreate.Score,
                     Username = reviewCreate.Username,
                     Text = reviewCreate.Text,
@@ -51,18 +51,25 @@ namespace WebStore.BLL.Services
             }
         }
 
-        public List<ReviewShow> ListReviews(Func<Review, bool> expression)
+        public List<ReviewShow> ListReviews(Func<Review, bool> expression, Guid? productId)
         {
             try
             {
                 List<Review> reviews;
                 if (expression == null)
                 {
-                    reviews = _db.Reviews.GetAll().ToList();
+                    reviews = _db.Reviews.GetAll().Where(r=>r.ProductId==productId).ToList();
                 }
                 else
                 {
-                    reviews = _db.Reviews.GetAll().Where(expression).ToList();
+                    List<Review> primaryReviews = _db.Reviews.GetAll().Where(expression).ToList();
+                    reviews = primaryReviews.FindAll(
+                        delegate (Review review)
+                        {
+                            return review.ProductId == productId;
+                        });
+                    //reviews = _db.Reviews.GetAll().Where(expression).ToList();
+
                 }
                 return reviews.Select(r =>
                 {

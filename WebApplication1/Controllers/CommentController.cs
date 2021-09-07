@@ -9,7 +9,7 @@ using WebStore.BLL.VMs;
 
 namespace WebStore.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/products/{productId?}/{reviewId?}")]
     [ApiController]
     public class CommentController : ControllerBase
     {
@@ -21,16 +21,16 @@ namespace WebStore.API.Controllers
         }
 
         [Route("commentall")]
-        public List<CommentShow> GetAllComments()
+        public List<CommentShow> GetAllComments(Guid? reviewId)
         {
-            return _commentService.ListComments(null);
+            return _commentService.ListComments(null, reviewId);
         }
 
         [HttpGet]
-        [Route("commentid")]
-        public List<CommentShow> GetCommentByID(Guid guid)
+        [Route("comment")]
+        public List<CommentShow> GetCommentByID(Guid? commentId, Guid? reviewId)
         {
-            return _commentService.ListComments(product => product.Id == guid);
+            return _commentService.ListComments(product => product.Id == commentId, reviewId);
         }
 
         [HttpPost]

@@ -39,18 +39,23 @@ namespace WebStore.BLL.Services
             }
         }
 
-        public List<CommentShow> ListComments(Func<Comment, bool> expression)
+        public List<CommentShow> ListComments(Func<Comment, bool> expression, Guid? reviewId)
         {
             try
             {
                 List<Comment> comments;
                 if (expression == null)
                 {
-                    comments = _db.Comments.GetAll().ToList();
+                    comments = _db.Comments.GetAll().Where(c=>c.ReviewId==reviewId).ToList();
                 }
                 else
                 {
-                    comments = _db.Comments.GetAll().Where(expression).ToList();
+                    List<Comment> primaryComments = _db.Comments.GetAll().Where(expression).ToList();
+                    comments = primaryComments.FindAll(
+                        delegate (Comment comment)
+                        {
+                            return comment.ReviewId == reviewId;
+                        });
                 }
                 return comments.Select(c =>
                 {

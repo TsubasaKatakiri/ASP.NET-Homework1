@@ -9,7 +9,7 @@ namespace WebStore.BLL.Interfaces
 {
     public interface IReviewService
     {
-        Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate);
-        List<ReviewShow> ListReviews(Func<Review, bool> expression);
+        Task<Guid> CreateReviewAsync(ReviewCreate reviewCreate, Guid? productId);
+        List<ReviewShow> ListReviews(Func<Review, bool> expression, Guid? productId);
     }
 }

@@ -15,10 +15,8 @@ namespace WebStore.Models
 
         public int Score { get; set; }
 
-        [Required]
         public string Username { get; set; }
 
-        [Required]
         public string Text { get; set; }
 
         public string File { get; set; }

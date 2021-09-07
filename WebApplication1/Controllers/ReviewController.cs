@@ -9,7 +9,7 @@ using WebStore.BLL.VMs;
 
 namespace WebStore.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/products/{productId?}")]
     [ApiController]
     public class ReviewController : ControllerBase
     {
@@ -21,23 +21,23 @@ namespace WebStore.API.Controllers
         }
 
         [HttpGet]
-        [Route("reviewall")]
-        public List<ReviewShow> GetAllReviews()
+        [Route("reviews")]
+        public List<ReviewShow> GetAllReviews(Guid? productId)
         {
-            return _reviewService.ListReviews(null);
+            return _reviewService.ListReviews(null, productId);
         }
 
         [HttpGet]
-        [Route("reviewid")]
-        public List<ReviewShow> GetReviewByID(Guid guid)
+        [Route("{reviewId?}")]
+        public List<ReviewShow> GetReviewByID(Guid? reviewId, Guid? productId)
         {
-            return _reviewService.ListReviews(review=>review.Id==guid);
+            return _reviewService.ListReviews(review=>review.Id == reviewId, productId);
         }
 
         [HttpPost]
-        public Guid CreateReview([FromForm]ReviewCreate review)
+        public Guid CreateReview([FromForm]ReviewCreate review, Guid? productId)
         {
-            return (_reviewService.CreateReviewAsync(review)).Result;
+            return (_reviewService.CreateReviewAsync(review, productId)).Result;
         }
     }
 }
